@@ -15,7 +15,7 @@ jobs:
       steps:
         - name: Checkout repository
           if: env.SKIP_X86_64 != 'YES'
-          uses: actions/checkout@v4
+          uses: actions/checkout@v5
           with:
             path: main
             filter: "blob:none"
@@ -191,7 +191,7 @@ jobs:
         steps:
           - name: Checkout repository
             if: env.SKIP_AARCH64 != 'YES'
-            uses: actions/checkout@v4
+            uses: actions/checkout@v5
             with:
               path: main
               filter: "blob:none" #https://github.blog/2020-12-21-get-up-to-speed-with-partial-clone-and-shallow-clone/
@@ -362,7 +362,7 @@ jobs:
       permissions: write-all      
       steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: main
           filter: "blob:none"
