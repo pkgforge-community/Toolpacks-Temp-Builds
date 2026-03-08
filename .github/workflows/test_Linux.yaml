@@ -71,7 +71,7 @@ jobs:
   
         - name: Set up QEMU
           if: env.SKIP_X86_64 != 'YES'
-          uses: docker/setup-qemu-action@v3
+          uses: docker/setup-qemu-action@v4
           continue-on-error: true
         - name: Set up Docker Buildx
           if: env.SKIP_X86_64 != 'YES'
@@ -244,7 +244,7 @@ jobs:
 
           - name: Set up QEMU
             if: env.SKIP_AARCH64 != 'YES'
-            uses: docker/setup-qemu-action@v3
+            uses: docker/setup-qemu-action@v4
             continue-on-error: true
           - name: Set up Docker Buildx
             if: env.SKIP_AARCH64 != 'YES'
